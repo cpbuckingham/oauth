@@ -1,0 +1,29 @@
+<!-- view template -->
+<!-- called from your routes in server.js -->
+
+<!-- templating docs: http://mozilla.github.io/nunjucks/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="description" content="A cool thing made with HyperWeb">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      {% block header %}
+      <!-- override 'block header' in your template -->
+      {% endblock %}
+    </header>
+    <hr>
+    {% block content %}
+    <!-- override 'block content' in your template -->
+    {% endblock %}
+
+    {% block scripts %}
+    <!-- override 'block scripts' in your template -->
+    {% endblock %}
+  </body>
+</html>
